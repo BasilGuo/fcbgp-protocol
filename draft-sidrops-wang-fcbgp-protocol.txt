@@ -5,36 +5,38 @@
 sidrops                                                            K. Xu
 Internet-Draft                                                   X. Wang
 Intended status: Standards Track                                  Z. liu
-Expires: 13 June 2024                                              L. Qi
+Expires: 14 June 2024                                              L. Qi
                                                                    J. Wu
                                                      Tsinghua University
-                                                        11 December 2023
+                                                        12 December 2023
 
 
                      FC-BGP Protocol Specification
-                    draft-sidrops-wang-fcbgp-latest
+                draft-sidrops-wang-fcbgp-protocol-latest
 
 Abstract
 
-   This document defines a standard profile for the framework of
-   Forwarding Commitment BGP (FC-BGP).  Forwarding Commitment（FC）is a
-   cryptographically signed code to certify an AS's routing intent on
-   its directly connected hops.  Based on FC, the goal of FC-BGP is to
-   build a secure inter-domain system that can simultaneously
-   authenticate AS_PATH attribute in BGP-UPDATE and validate network
-   forwarding on the dataplane.
+   This document describes Forwarding Commitment BGP (FC-BGP), an
+   extension to the Border Gateway Protocol (BGP) that provides security
+   for the path of Autonomous Systems (ASes) through which a BGP UPDATE
+   message passes.  Forwarding Commitment（FC）is a cryptographically
+   signed code to certify an AS's routing intent on its directly
+   connected hops.  Based on FC, the goal of FC-BGP is to build a secure
+   inter-domain system that can simultaneously authenticate the AS_PATH
+   attribute in BGP-UPDATE and validate network forwarding on the data
+   plane.
 
 About This Document
 
    This note is to be removed before publishing as an RFC.
 
    The latest revision of this draft can be found at
-   https://BasilGuo.github.io/fcbgp-framework/draft-sidrops-wang-
-   fcbgp.html.  Status information for this document may be found at
-   https://datatracker.ietf.org/doc/draft-sidrops-wang-fcbgp/.
+   https://BasilGuo.github.io/fcbgp-protocol/draft-sidrops-wang-fcbgp-
+   protocol.html.  Status information for this document may be found at
+   https://datatracker.ietf.org/doc/draft-sidrops-wang-fcbgp-protocol/.
 
    Source for this draft and an issue tracker can be found at
-   https://github.com/BasilGuo/fcbgp-framework.
+   https://github.com/BasilGuo/fcbgp-protocol.
 
 Status of This Memo
 
@@ -51,7 +53,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 13 June 2024.
+   This Internet-Draft will expire on 14 June 2024.
 
 Copyright Notice
 
@@ -70,7 +72,7 @@ Copyright Notice
 Table of Contents
 
    1.  Introduction
-     1.1.  Conventions and Definitions
+     1.1.  Requirements Language
    2.  FC-BGP Negotiation
    3.  FC Attribute
    4.  Processing a Sending FC-BGP UPDATE Message
@@ -83,7 +85,9 @@ Table of Contents
 
 1.  Introduction
 
-1.1.  Conventions and Definitions
+   TODO
+
+1.1.  Requirements Language
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
