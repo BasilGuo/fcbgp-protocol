@@ -4,11 +4,11 @@
 
 sidrops                                                            K. Xu
 Internet-Draft                                                   X. Wang
-Intended status: Standards Track                                  Z. liu
-Expires: 14 June 2024                                              L. Qi
+Intended status: Standards Track                                  Z. Liu
+Expires: 15 June 2024                                              Q. Li
                                                                    J. Wu
                                                      Tsinghua University
-                                                        12 December 2023
+                                                        13 December 2023
 
 
                      FC-BGP Protocol Specification
@@ -53,7 +53,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 14 June 2024.
+   This Internet-Draft will expire on 15 June 2024.
 
 Copyright Notice
 
@@ -147,14 +147,14 @@ Authors' Addresses
    Email: wangxiaoliang0623@foxmail.com
 
 
-   Zhuotao liu
+   Zhuotao Liu
    Tsinghua University
    Beijing
    China
    Email: zhuotaoliu@tsinghua.edu.cn
 
 
-   Li Qi
+   Qi Li
    Tsinghua University
    Beijing
    China
