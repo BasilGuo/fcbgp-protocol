@@ -305,7 +305,7 @@ Table of Contents
 4.  Security Considerations
 
    The security considerations of [RFC8205] and [RFC4272] also apply to
-   ASPAs.
+   FC-BGP.
 
 5.  IANA Considerations
 
