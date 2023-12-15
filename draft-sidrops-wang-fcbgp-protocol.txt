@@ -73,16 +73,15 @@ Table of Contents
 
    1.  Introduction
      1.1.  Requirements Language
-   2.  FC-BGP Negotiation
-   3.  FC Attribute
-   4.  Processing a Received FC-BGP UPDATE Message
-     4.1.  Verify AS-Path Attribute
-     4.2.  BGP Best Path Selection
-     4.3.  Update the FC path attributes and continue to advertise the
+   2.  FC Attribute{#fc-attr}
+   3.  Processing a Received FC-BGP UPDATE Message
+     3.1.  Verify AS-Path Attribute
+     3.2.  BGP Best Path Selection
+     3.3.  Update the FC path attributes and continue to advertise the
            BGP route
-   5.  Security Considerations
-   6.  IANA Considerations
-   7.  Normative References
+   4.  Security Considerations
+   5.  IANA Considerations
+   6.  Normative References
    Acknowledgments
    Authors' Addresses
 
@@ -95,10 +94,10 @@ Table of Contents
    deployment scenarios.
 
    FC-BGP extends the BGP Update message with a new optional,
-   transitive, non-partial, extended path attribute called FC
-   (Forwarding Commitment).  All FC-BGP enabled ASes that the BGP Update
-   message traverses will add the corresponding FC.  Subsequent ASes can
-   then use the FC list carried in the update message to verify that the
+   transitive, and extended path attribute called FC (Forwarding
+   Commitment).  All FC-BGP enabled ASes that the BGP Update message
+   traverses will add the corresponding FC.  Subsequent ASes can then
+   use the FC list carried in the update message to verify that the
    advertised path is consistent with the AS Path attribute.
 
    Similar to BGPsec, FC-BGP relies on RPKI to perform route origin
@@ -118,15 +117,15 @@ Table of Contents
    BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
-2.  FC-BGP Negotiation
-
-   TODO: BGP-OPEN packet TODO: no use BGP-AS_SET
-
-3.  FC Attribute
+2.  FC Attribute{#fc-attr}
 
    FC exists in BGP UPDATE messages as a path attribute.  It is an
-   optional, transitive, non-partial, and extended-length path
-   attribute.  The format of FC path attribute is shown in Figure 2.
+   optional, transitive, and extended-length path attribute, so there is
+   no need to negotiate this feature in the setup of FC-BGP.  Thought
+   FC-BGP would not modify the AS_PATH path attribute, never use AS_SET
+   or AS_CONFED_SET in FC-BGP as [RFC6472] says.
+
+   The format of FC path attribute is shown in Figure 1.
 
     0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -199,7 +198,7 @@ Table of Contents
       Prefix is the IP address prefix which is encapsulated in the BGP
       UPDATE, and only one prefix is used each time.
 
-4.  Processing a Received FC-BGP UPDATE Message
+3.  Processing a Received FC-BGP UPDATE Message
 
    Upon receiving a BGP update message carrying FC path attributes, an
    AS will perform the following three steps:
@@ -217,7 +216,7 @@ Table of Contents
        declaration for the prefix 192.0.2.0/24, with an originating AS
        of 65536 and a next hop of 65538.  All three ASes support FC-BGP.
 
-4.1.  Verify AS-Path Attribute
+3.1.  Verify AS-Path Attribute
 
    An FC-BGP speaker in AS 65537, upon receiving an update message,
    retrieves the FC path attribute and extracts the FC list.  It then
@@ -229,7 +228,7 @@ Table of Contents
    for all FCs and AS-Paths in the FC list.  If AS 65537 does not
    support FC-BGP, it simply forwards the BGP UPDATE.
 
-4.2.  BGP Best Path Selection
+3.2.  BGP Best Path Selection
 
    Based on the AS-Path verification, it is recommended that AS 65537
    prioritize route selection as follows:
@@ -261,7 +260,7 @@ Table of Contents
        shooter.  The addition of FC does not affect the order of route
        selection in this section, so it will not be discussed further.
 
-4.3.  Update the FC path attributes and continue to advertise the BGP
+3.3.  Update the FC path attributes and continue to advertise the BGP
       route
 
    In FC-BGP, FC protects the route prefix and part of the AS-Path
@@ -301,16 +300,16 @@ Table of Contents
    the same time.  After the FC-BGP speaker is filled, it sends the BGP
    update message according to the standard BGP processing flow.
 
-5.  Security Considerations
+4.  Security Considerations
 
    The security considerations of [RFC8205] and [RFC4272] also apply to
    ASPAs.
 
-6.  IANA Considerations
+5.  IANA Considerations
 
    This document has no IANA actions.
 
-7.  Normative References
+6.  Normative References
 
    [RFC4271]  Rekhter, Y., Ed., Li, T., Ed., and S. Hares, Ed., "A
               Border Gateway Protocol 4 (BGP-4)", RFC 4271,
@@ -320,6 +319,15 @@ Table of Contents
    [RFC4272]  Murphy, S., "BGP Security Vulnerabilities Analysis",
               RFC 4272, DOI 10.17487/RFC4272, January 2006,
               <https://www.rfc-editor.org/rfc/rfc4272>.
+
+   [RFC5492]  Scudder, J. and R. Chandra, "Capabilities Advertisement
+              with BGP-4", RFC 5492, DOI 10.17487/RFC5492, February
+              2009, <https://www.rfc-editor.org/rfc/rfc5492>.
+
+   [RFC6472]  Kumari, W. and K. Sriram, "Recommendation for Not Using
+              AS_SET and AS_CONFED_SET in BGP", BCP 172, RFC 6472,
+              DOI 10.17487/RFC6472, December 2011,
+              <https://www.rfc-editor.org/rfc/rfc6472>.
 
    [RFC7607]  Kumari, W., Bush, R., Schiller, H., and K. Patel,
               "Codification of AS 0 Processing", RFC 7607,
