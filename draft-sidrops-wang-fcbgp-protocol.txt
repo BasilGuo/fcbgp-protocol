@@ -73,7 +73,7 @@ Table of Contents
 
    1.  Introduction
      1.1.  Requirements Language
-   2.  FC Attribute{#fc-attr}
+   2.  FC Attribute
    3.  Processing a Received FC-BGP UPDATE Message
      3.1.  Verify AS-Path Attribute
      3.2.  BGP Best Path Selection
@@ -81,7 +81,9 @@ Table of Contents
            BGP route
    4.  Security Considerations
    5.  IANA Considerations
-   6.  Normative References
+   6.  References
+     6.1.  Normative References
+     6.2.  Informative References
    Acknowledgments
    Authors' Addresses
 
@@ -117,7 +119,7 @@ Table of Contents
    BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
-2.  FC Attribute{#fc-attr}
+2.  FC Attribute
 
    FC exists in BGP UPDATE messages as a path attribute.  It is an
    optional, transitive, and extended-length path attribute, so there is
@@ -309,25 +311,14 @@ Table of Contents
 
    This document has no IANA actions.
 
-6.  Normative References
+6.  References
+
+6.1.  Normative References
 
    [RFC4271]  Rekhter, Y., Ed., Li, T., Ed., and S. Hares, Ed., "A
               Border Gateway Protocol 4 (BGP-4)", RFC 4271,
               DOI 10.17487/RFC4271, January 2006,
               <https://www.rfc-editor.org/rfc/rfc4271>.
-
-   [RFC4272]  Murphy, S., "BGP Security Vulnerabilities Analysis",
-              RFC 4272, DOI 10.17487/RFC4272, January 2006,
-              <https://www.rfc-editor.org/rfc/rfc4272>.
-
-   [RFC5492]  Scudder, J. and R. Chandra, "Capabilities Advertisement
-              with BGP-4", RFC 5492, DOI 10.17487/RFC5492, February
-              2009, <https://www.rfc-editor.org/rfc/rfc5492>.
-
-   [RFC6472]  Kumari, W. and K. Sriram, "Recommendation for Not Using
-              AS_SET and AS_CONFED_SET in BGP", BCP 172, RFC 6472,
-              DOI 10.17487/RFC6472, December 2011,
-              <https://www.rfc-editor.org/rfc/rfc6472>.
 
    [RFC7607]  Kumari, W., Bush, R., Schiller, H., and K. Patel,
               "Codification of AS 0 Processing", RFC 7607,
@@ -346,6 +337,17 @@ Table of Contents
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
+
+6.2.  Informative References
+
+   [RFC4272]  Murphy, S., "BGP Security Vulnerabilities Analysis",
+              RFC 4272, DOI 10.17487/RFC4272, January 2006,
+              <https://www.rfc-editor.org/rfc/rfc4272>.
+
+   [RFC6472]  Kumari, W. and K. Sriram, "Recommendation for Not Using
+              AS_SET and AS_CONFED_SET in BGP", BCP 172, RFC 6472,
+              DOI 10.17487/RFC6472, December 2011,
+              <https://www.rfc-editor.org/rfc/rfc6472>.
 
 Acknowledgments
 
