@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-12-14T00:52:44.325689+00:00",
+  "timestamp": "2023-12-17T00:56:56.910201+00:00",
   "repo": "BasilGuo/fcbgp-protocol",
   "labels": [
     {
@@ -63,7 +63,7 @@
       "labels": [],
       "body": "init repo",
       "createdAt": "2023-12-11T07:06:11Z",
-      "updatedAt": "2023-12-11T07:06:48Z",
+      "updatedAt": "2023-12-15T13:08:21Z",
       "baseRepository": "BasilGuo/fcbgp-protocol",
       "baseRefName": "main",
       "baseRefOid": "086f3f67a2f79b8aca68b3043e05c122365bfff2",
@@ -93,7 +93,7 @@
       "labels": [],
       "body": "update: metadata",
       "createdAt": "2023-12-11T07:14:00Z",
-      "updatedAt": "2023-12-11T07:14:42Z",
+      "updatedAt": "2023-12-15T13:08:23Z",
       "baseRepository": "BasilGuo/fcbgp-protocol",
       "baseRefName": "main",
       "baseRefOid": "15b48c05236ea30cf809cfd62bb06df48a1136b1",
@@ -133,6 +133,62 @@
       "mergedBy": "BasilGuo",
       "mergeCommit": {
         "oid": "f2dc09cb2c06878e9a7ce5c57b2707d222d94977"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 4,
+      "id": "PR_kwDOK4QgQc5iG-IX",
+      "title": "Update draft-sidrops-wang-fcbgp-protocol.md",
+      "url": "https://github.com/BasilGuo/fcbgp-protocol/pull/4",
+      "state": "MERGED",
+      "author": "BasilGuo",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-12-15T13:01:05Z",
+      "updatedAt": "2023-12-15T13:06:38Z",
+      "baseRepository": "BasilGuo/fcbgp-protocol",
+      "baseRefName": "main",
+      "baseRefOid": "bdc4ab4324c285919d1e31f3998a3bbeeef516e0",
+      "headRepository": "BasilGuo/fcbgp-protocol",
+      "headRefName": "WXL-update",
+      "headRefOid": "85a8eecd7395da686c27f8fa649fa9ac3f9795a9",
+      "closedAt": "2023-12-15T13:06:33Z",
+      "mergedAt": "2023-12-15T13:06:33Z",
+      "mergedBy": "BasilGuo",
+      "mergeCommit": {
+        "oid": "0d1aa3a65baf454608fe0d8954cd35a06968ebd4"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 5,
+      "id": "PR_kwDOK4QgQc5iHMPY",
+      "title": "Update draft-sidrops-wang-fcbgp-protocol.md",
+      "url": "https://github.com/BasilGuo/fcbgp-protocol/pull/5",
+      "state": "MERGED",
+      "author": "BasilGuo",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "AS_SET, AS_CONFED_SET, and FCBGP setup.",
+      "createdAt": "2023-12-15T13:44:38Z",
+      "updatedAt": "2023-12-15T13:46:36Z",
+      "baseRepository": "BasilGuo/fcbgp-protocol",
+      "baseRefName": "main",
+      "baseRefOid": "0d1aa3a65baf454608fe0d8954cd35a06968ebd4",
+      "headRepository": "BasilGuo/fcbgp-protocol",
+      "headRefName": "BasilGuo-fcbgp-setup",
+      "headRefOid": "82608812b8b314e60808d826674c3ac0bd037443",
+      "closedAt": "2023-12-15T13:46:27Z",
+      "mergedAt": "2023-12-15T13:46:27Z",
+      "mergedBy": "BasilGuo",
+      "mergeCommit": {
+        "oid": "a3996515c23cf36ca1115420de8855073bcbdd88"
       },
       "comments": [],
       "reviews": []
