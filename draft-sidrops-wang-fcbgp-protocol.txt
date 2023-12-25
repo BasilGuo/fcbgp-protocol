@@ -5,10 +5,12 @@
 sidrops                                                            K. Xu
 Internet-Draft                                                   X. Wang
 Intended status: Standards Track                                  Z. Liu
-Expires: 17 June 2024                                              Q. Li
+Expires: 27 June 2024                                              Q. Li
                                                                    J. Wu
                                                      Tsinghua University
-                                                        15 December 2023
+                                                                  Y. Guo
+                                                 Zhongguancun Laboratory
+                                                        25 December 2023
 
 
                      FC-BGP Protocol Specification
@@ -53,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 17 June 2024.
+   This Internet-Draft will expire on 27 June 2024.
 
 Copyright Notice
 
@@ -388,3 +390,10 @@ Authors' Addresses
    Beijing
    China
    Email: jianping@cernet.edu.cn
+
+
+   Yangfei Guo
+   Zhongguancun Laboratory
+   Beijing
+   China
+   Email: guoyangfei@zgclab.edu.cn
