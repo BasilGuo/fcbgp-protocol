@@ -5,12 +5,12 @@
 sidrops                                                            K. Xu
 Internet-Draft                                                   X. Wang
 Intended status: Standards Track                                  Z. Liu
-Expires: 5 July 2024                                               Q. Li
+Expires: 6 July 2024                                               Q. Li
                                                                    J. Wu
                                                      Tsinghua University
                                                                   Y. Guo
                                                  Zhongguancun Laboratory
-                                                          2 January 2024
+                                                          3 January 2024
 
 
                      FC-BGP Protocol Specification
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 July 2024.
+   This Internet-Draft will expire on 6 July 2024.
 
 Copyright Notice
 
@@ -291,7 +291,7 @@ Table of Contents
 
    All FC-BGP UPDATE messages must comply with the maximum BGP message
    size.  If the final message exceeds the maximum message size, then it
-   must follow the processing of section 9.2 of RFC4271.
+   must follow the processing of Section 9.2 of [RFC4271].
 
    The FC-BGP speaker in AS 65537 will encapsulate each prefix to be
    sent to AS 65538 in a single UPDATE message, add the FC path
@@ -315,7 +315,7 @@ Table of Contents
 
 5.  IANA Considerations
 
-   This document has no IANA actions.
+   FC-BGP-UPDATE-PATH-ATTRIBUTE-TYPE.
 
 6.  References
 
