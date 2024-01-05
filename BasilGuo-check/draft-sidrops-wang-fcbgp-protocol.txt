@@ -5,12 +5,12 @@
 sidrops                                                            K. Xu
 Internet-Draft                                                   X. Wang
 Intended status: Standards Track                                  Z. Liu
-Expires: 6 July 2024                                               Q. Li
+Expires: 8 July 2024                                               Q. Li
                                                                    J. Wu
                                                      Tsinghua University
                                                                   Y. Guo
                                                  Zhongguancun Laboratory
-                                                          3 January 2024
+                                                          5 January 2024
 
 
                      FC-BGP Protocol Specification
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 6 July 2024.
+   This Internet-Draft will expire on 8 July 2024.
 
 Copyright Notice
 
@@ -192,7 +192,8 @@ Table of Contents
    Algorithm ID:  1 byte, the current value is 1, indicating that SHA256
       is used to hash the content to be signed, and ECDSA is used for
       signing.  It follows the algorithm suite defined in [RFC8208] and
-      its updates.
+      its updates.  As each FC has its Algorithm ID, so no need to worry
+      about that one suddenly changing its algorithm suite.
 
    Flags:  1 byte, its value MUST be 0.  None of these bits are assigned
       values.
@@ -213,16 +214,16 @@ Table of Contents
 
    2.  BGP best path selection.
 
-   3.  Update the FC path attributes and continue to advertise the BGP
+   3.  Update the FC path attributes and continue advertising the BGP
        route.
 
    Note that an AS that originates a BGP UPDATE message carrying FC path
    attributes will only perform the third step.  An AS that no longer
    propagates a BGP UPDATE will only complete the first two steps.  For
    the sake of discussion, we assume that AS 65537 receives an FC-BGP
-   UPDATE message that contains a declaration for the prefix
-   192.0.2.0/24, with an originating AS of 65536 and a next hop of
-   65538.  All three ASes support FC-BGP.
+   UPDATE message that contains a declaration for the prefix 192.0.0/24,
+   with an originating AS of 65536 and a next hop of 65538.  All three
+   ASes support FC-BGP.
 
 3.1.  Verify AS-Path Attribute
 
